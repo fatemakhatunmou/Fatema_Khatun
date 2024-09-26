@@ -1,0 +1,478 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* General styling for links and headers */
+
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Center the icons vertically */
+    gap: 15px; /* Spacing between icons */
+    margin: 20px 0;
+}
+
+.social-icons .icon {
+    width: 40px;
+    height: 40px;
+}
+
+
+a {
+    color: #007c91;
+    text-decoration: none;
+}
+
+a.textlink {
+    color: #00434f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005c6a;
+}
+
+a.textlink:hover {
+    color: #007c91;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 5px;
+}
+
+
+ul.itemize {
+    width: 90%; /* Ensures the UL takes full width */
+}
+
+ul.itemize li {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 5px; /* Adds space for the bullet outside the text block */
+    padding-left: 5px; /* Adds space between the bullet and the text */
+}
+
+ul.itemize li::marker {
+    color: #333;
+    /* font-size: 20pt;
+        vertical-align: bottom; */ 
+}
+
+/* Navigation bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+nav {
+    background-color: #1f1f21; /* #222; */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Not needed it seeems 
+    flex-grow: 1;
+    justify-content: flex-end;
+    */
+    /* justify-content: center; */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a, nav a:hover {
+    color: white;
+}
+
+nav ul li a {
+    padding: 15px 20px;
+    display: block; 
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #444;
+}
+
+.navbar a.name {
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    /* margin-left: 20px; */
+}
+
+/* Hamburger Menu for Mobile View */ 
+/* Source: https://medium.com/creative-technology-concepts-code/responsive-mobile-dropdown-navigation-using-css-only-7218e4498a99; */
+
+.navbar .menu-icon {
+    display: none; /* Hidden by default, will be displayed on mobile */
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 24px 20px;
+    user-select: none; /*Disables text selection on the element and its children.*/ 
+    z-index: 1000; /* Ensure it's above other content */
+}
+/* This is the middle bar */
+.navbar .menu-icon .navicon {
+    background: #fff;
+    display: block;
+    width: 18px;
+    height: 2px;
+    position: relative;
+    transition: background-color 0.2s ease-out;
+}
+/* These are the top and bottom bars */ 
+.navbar .menu-icon .navicon:before,
+.navbar .menu-icon .navicon:after {
+    content: '';
+    background: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.2s ease-out;
+}
+/* This shifts the befor and after bars */ 
+.navbar .menu-icon .navicon:before {
+    top: 5px;
+}
+.navbar .menu-icon .navicon:after {
+    top: -5px;
+}
+/* This is the checkbox. It is always hidden */ 
+#menu-toggle {
+    display: none;
+}
+
+/* Content and Footer */ 
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #888;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* Index page profile */
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 70px;
+}
+
+.profile-picture {
+    flex: 1;
+    text-align: center;
+    padding-right: 20px;
+    padding-top: 13px;
+}
+
+.profile-picture img {
+    max-width: 320px;
+    height: auto;
+    /* border-radius: 50%; */
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.profile-info p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Social Icons */
+
+.social-icons {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: #1f1f21; /* #222; */
+    margin: 0 15px;
+}
+
+.social-icons svg {
+    width: auto;
+    height: 32px;
+    vertical-align: middle;
+}
+
+.social-icons a:hover {
+   color: #444;
+}
+
+#social-contact {
+    text-align: left;
+}
+
+/* Research Page */
+
+.article {
+    margin-bottom: 30px;
+}
+
+.article h3 {
+    color: #111;
+    font-size: 20px;
+    margin-bottom: 0px; /* 5px; */
+}
+
+.with-picture h3 {
+    color: #111;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px; /* 5px; */
+}
+
+.venue {
+    font-style: italic;
+    margin-bottom: 5px; /* 10px; */
+}
+
+.abstract {
+    margin-bottom: 10px;
+}
+
+.links {
+    margin-bottom: 10px;
+}
+
+.with-picture {
+    display: flex;
+    align-items: flex-start; /* row; */
+    margin-top: 50px;
+}
+
+.with-picture img, .with-picture > a {
+    order: 1;
+    width: 200px;
+    margin-right: 20px;
+}
+.data-product img, .data-product > a {
+    width: 300px !important;
+}
+
+/* linked pictures */
+.with-picture > a:hover {
+    opacity: 80%;
+}
+
+.article-content {
+    flex: 1;
+}
+
+.with-picture .article-content {
+    order: 2;
+}
+
+/* Software Page */
+
+.software-name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.software-description {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+.badges {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.badges img {
+    margin: 2px 0px;
+    height: 1.3em;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Contact Page */
+
+#institute-logo {
+    height: 80px;
+    width: auto;
+    margin-top: -10px;
+}
+
+/* Mobile firendliness */
+
+@media screen and (max-width: 850px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 0px;
+        height: 50px;
+    }
+    .name {
+        padding: 0px 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0, 0.7);
+        width: 100%;
+        /* This is just needed for dropdown to be above the other content */ 
+        position: absolute;
+        top: 50px;
+        z-index: 1000; /* Ensure it's always above highlighted pictures */
+        /* This is for the dropdown animation */ 
+        visibility: hidden;
+        max-height: 0px; /* initially zero height to have transition */
+        overflow: hidden; /* Hide overflow to prevent content (li) from spilling out */
+        transition: visibility 0s, max-height 0.2s ease-out;
+    }
+    nav ul li a:hover, nav ul li a.active {
+        background-color: rgba(255, 255, 255, 0.35);
+    }
+
+    /* Show the menu icon on mobile */
+    .navbar .menu-icon {
+        display: inline-block; 
+    }
+    /*Now the action when it is clicked */
+    #menu-toggle:checked ~ ul {
+        visibility: visible;
+        max-height: 400px;
+    }
+    #menu-toggle:checked ~ .menu-icon .navicon {
+        background-color: transparent;
+    }
+    #menu-toggle:checked ~ .menu-icon .navicon:before {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+    #menu-toggle:checked ~ .menu-icon .navicon:after {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    /* Old static version
+    .menu-icon {
+        display: block;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        padding-right: 10px;
+        padding-top: 9px;
+        padding-bottom: 11.5px;
+        order: 2;
+    }*/
+
+}
+
+/* Handy */
+@media screen and (max-width: 600px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    .profile-picture {
+        padding: 0;
+        margin: 0 auto;
+    }
+    .profile-info {
+        text-align: center;
+    }
+
+
+    .with-picture {
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+    .with-picture img, .with-picture > a {
+        order: 2;
+        margin-top: 2px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .data-product img, .data-product > a {
+        width: 100% !important;
+    }
+
+    .with-picture .article-content {
+        order: 1;
+    }
+
+    .abstract, .software-description {
+        text-align: justify;
+    }
+
+    .social-icons a {
+        margin: 0 10px;
+    }
+}
